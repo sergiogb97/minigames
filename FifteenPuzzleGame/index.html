@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Fifteen Puzzle Game</title>
+		<link rel="stylesheet" href="styles.css">
+		<link id="sprite" rel="stylesheet" type="text/css" href="css/sprite0.css" >
+	</head>
+	<body>
+		<header>
+      <h1>Fifteen Puzzle Game</h1>
+    </header>
+
+		<div class="timer">
+			<div class="badge">time</div>
+			<span id="min">00</span> : <span id="sec">00</span>
+		</div>
+
+		<div class="board">
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell free"></div>
+		</div>
+
+  	<p id="action-message">Make your move</p>
+
+		<div class="select-sprite">
+			<div id="previous" class="button"></div>
+			<img id="sprite" src="sprites/sprite0.jpg"/>
+			<div id="next" class="button"></div>
+		</div>
+
+		<div class="options">
+			<input class="button" type="button" value="DESORDENAR"/>
+			<input class="button" type="button" value="COMPROBAR"/>
+			<input class="button" type="button" value="TRAMPITAS"/>
+		</div>
+
+		<script src="app.js" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Asap, sans-serif;
+}
+
+body {
+    background-color: #25272E;
+}
+
+header {
+  background-color: white;
+  padding: 20px;
+}
+
+header > h1 {
+  color: #25272E;
+  text-align: center;
+}
+
+.timer {
+  margin: 30px auto;
+  border: 3px solid white;
+  border-radius: 4px;
+  text-align: center;
+  width: 150px;
+  color: white;
+  font-size: 38px;
+  padding: 3px 10px;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -11px;
+  left: 52px;
+  background-color: #E25840;
+  color: white;
+  font-size: 12px;
+  padding: 2px 8px;
+}
+
+.board {
+  margin: 30px auto 0;
+  /* border: 3px solid black; */
+  width: 500px;
+  height: 500px;
+}
+
+.cell {
+  float: left;
+  box-sizing: border-box;
+  /* border: 1px solid white; */
+  width: 125px;
+  height: 125px;
+}
+
+#action-message {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.select-sprite {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#sprite {
+  width: 100px;
+}
+
+
+
+
+.button {
+  margin: 20px;
+}
+
+.next {
+  background-image: url("buttons/next.png");
+  background-size: 33px;
+  background-position: center;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.next:hover {
+  background-size: 53px;
+  width: 60px;
+  height: 60px;
+}
+
+.previous {
+  background-image: url("buttons/previous.png");
+  background-size: 33px;
+  background-position: center;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.previous:hover {
+  background-size: 53px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.image {
+  width: 20%;
+  margin: 3%;
+}
+
+.size {
+  width: 100%;
+}
+
+
+
+.options {
+  margin: 0%;
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.free {
+  background-color: white;
+}

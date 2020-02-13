@@ -1,0 +1,45 @@
+.box0 {
+	background: url( "../sprites/sprite3.jpg" ) 0px 0px;
+}
+.box1 {
+	background: url( "../sprites/sprite3.jpg" ) -100px 0px;
+}
+.box2 {
+	background: url( "../sprites/sprite3.jpg" ) -200px 0px;
+}
+.box3 {
+	background: url( "../sprites/sprite3.jpg" ) -300px 0px;
+}
+.box4 {
+	background: url( "../sprites/sprite3.jpg" ) 0px -100px;
+}
+.box5 {
+	background: url( "../sprites/sprite3.jpg" ) -100px -100px;
+}
+.box6 {
+	background: url( "../sprites/sprite3.jpg" ) -200px -100px;
+}
+.box7 {
+	background: url( "../sprites/sprite3.jpg" ) -300px -100px;
+}
+.box8 {
+	background: url( "../sprites/sprite3.jpg" ) 0px -200px;
+}
+.box9 {
+	background: url( "../sprites/sprite3.jpg" ) -100px -200px;
+}
+.box10 {
+	background: url( "../sprites/sprite3.jpg" ) -200px -200px;
+}
+.box11 {
+	background: url( "../sprites/sprite3.jpg" ) -300px -200px;
+}
+.box12 {
+	background: url( "../sprites/sprite3.jpg" ) 0px -300px;
+}
+.box13 {
+	background: url( "../sprites/sprite3.jpg" ) -100px -300px;
+}
+.box14 {
+	background: url( "../sprites/sprite3.jpg" ) -200px -300px;
+}

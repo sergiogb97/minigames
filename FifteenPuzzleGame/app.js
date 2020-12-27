@@ -1,3 +1,19 @@
+let times;
+const min_span = document.getElementById("min");
+const sec_span = document.getElementById("sec");
+const arCells_div = document.getElementsByClassName("cell");
+const freeCell_div = document.querySelector(".free");
+const message_p = document.getElementById("action-message");
+const prev_div = document.getElementById("prev");
+const next_div = document.getElementById("next");
+
+
+
+
+
+// -----------------------
+
+
 var global_id = 0;
 var global_interval;
 var global_m = 0;

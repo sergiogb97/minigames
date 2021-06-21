@@ -1,19 +1,3 @@
-let times;
-const min_span = document.getElementById("min");
-const sec_span = document.getElementById("sec");
-const arCells_div = document.getElementsByClassName("cell");
-const freeCell_div = document.querySelector(".free");
-const message_p = document.getElementById("action-message");
-const prev_div = document.getElementById("prev");
-const next_div = document.getElementById("next");
-
-
-
-
-
-// -----------------------
-
-
 var global_id = 0;
 var global_interval;
 var global_m = 0;
@@ -49,7 +33,7 @@ function move() {
   }
 }
 
-function order() {
+function disorder() {
   var nodosCeldas = document.getElementsByClassName( "cell" );
   var i, j, num;
   var bPrimeraVez = false;
@@ -114,7 +98,7 @@ function check() {
   }
 }
 
-function trampas() {
+function order() {
   var nodosCeldas = document.getElementsByClassName( "cell" );
   var tmp = "";
   var i;
@@ -128,26 +112,31 @@ function trampas() {
   nodosCeldas[ i ].classList.add( "free" );
 }
 
-function change() {
+function change(selection) {
   var nodosCeldas = document.getElementsByClassName( "cell" );
   var nodosImg = document.getElementsByTagName( "img" );
   var nodoLink = document.getElementById( "sprite" );
 
+  if (selection)
+    sum();
+  else
+    rest();
+  
   switch ( global_id ) {
     case ( 0 ):
-      nodosImg[ 0 ].src = "sprites/sprite0.jpg";
+      nodosImg[ 0 ].src = "srcs/sprite0.jpg";
       nodoLink.href = "css/sprite0.css";
     break;
     case ( 1 ):
-      nodosImg[ 0 ].src = "sprites/sprite1.jpg";
+      nodosImg[ 0 ].src = "srcs/sprite1.jpg";
       nodoLink.href = "css/sprite1.css";
     break;
     case ( 2 ):
-      nodosImg[ 0 ].src = "sprites/sprite2.jpg";
+      nodosImg[ 0 ].src = "srcs/sprite2.jpg";
       nodoLink.href = "css/sprite2.css";
     break;
     case ( 3 ):
-      nodosImg[ 0 ].src = "sprites/sprite3.jpg";
+      nodosImg[ 0 ].src = "srcs/sprite3.jpg";
       nodoLink.href = "css/sprite3.css";
   }
 }
@@ -173,15 +162,15 @@ function main() {
   var nodosClick = document.getElementsByClassName( "button" );
   var i;
 
-  trampas();
+  order();
   for ( i = 0; i < nodosCeldas.length; i++ ) {
     nodosCeldas[ i ].onclick = move;
   }
-  nodosClick[ 0 ].onclick = order;
-  nodosClick[ 1 ].onclick = check;
-  nodosClick[ 2 ].onclick = trampas;
-  //nodosClick[ 3 ].onclick = "rest();change()";
-  //nodosClick[ 4 ].onclick = "sum();change()";
+  nodosClick[ 0 ].onclick = function(){change(0)};
+  nodosClick[ 1 ].onclick = function(){change(0)};
+  nodosClick[ 2 ].onclick = disorder;
+  nodosClick[ 3 ].onclick = check;
+  nodosClick[ 4 ].onclick = order;
 }
 
 main();

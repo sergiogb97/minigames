@@ -54,20 +54,21 @@ function disorder() {
     nodosCeldas[ j ].classList.remove( nodosCeldas[ j ].classList.item( 1 ) );
     nodosCeldas[ j ].classList.add( tmp );
   }
-  nodosCeldas[ 15 ].classList.remove( nodosCeldas[ i ].classList.item( 1 ) );
+  nodosCeldas[ 15 ].classList.remove( nodosCeldas[ 15 ].classList.item( 1 ) );
   nodosCeldas[ 15 ].classList.add( "free" )
   if ( global_s == 0 ) {
-    global_interval = setInterval( "time()", 1000 );
+    global_interval = setInterval( time, 1000 );
   } else {
     clearInterval( global_interval );
     global_m = 0;
     global_s = 0;
-    global_interval = setInterval( "time()", 1000 );
+    global_interval = setInterval( time, 1000 );
   }
 }
 
 function time() {
-  var nodosTime = document.getElementsByClassName( "timer" );
+  var spanMin = document.getElementById( "min" );
+  var spanSec = document.getElementById( "sec" );
 
   if ( global_s != 59 ) {
     global_s++;
@@ -75,7 +76,12 @@ function time() {
     global_s = 0;
     global_m++;
   }
-  nodosTime[ 0 ].innerHTML = global_m + " minutos y " + global_s + " segundos";
+  spanMin.innerHTML = global_m;
+  if (spanMin.innerHTML.length != 2)
+    spanMin.innerHTML = '0' + spanMin.innerHTML;
+  spanSec.innerHTML = global_s;
+  if (spanSec.innerHTML.length != 2)
+    spanSec.innerHTML = '0' + spanSec.innerHTML;
 }
 
 function check() {
@@ -121,7 +127,7 @@ function change(selection) {
     sum();
   else
     rest();
-  
+
   switch ( global_id ) {
     case ( 0 ):
       nodosImg[ 0 ].src = "srcs/sprite0.jpg";
